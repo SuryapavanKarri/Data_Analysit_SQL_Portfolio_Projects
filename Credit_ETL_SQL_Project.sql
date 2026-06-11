@@ -189,3 +189,8 @@ select * from dim_customers;
 
 SELECT * FROM stg_cards;
 SELECT * FROM stg_transactions;
+
+  WHEN LOWER(sq.country) = 'us' THEN 'USA'
+        WHEN LOWER(sq.country) = 'united kingdom' THEN 'UK'
+        ELSE TRIM(sq.country)
+    END,
